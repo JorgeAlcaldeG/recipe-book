@@ -1,6 +1,7 @@
 import './App.css'
 import UseCategory from './hooks/UseCategory'
 import CatContainer from './components/CatContainer';
+import TopBar from './components/TopBar';
 function App() {
   const {categories,getCategory} = UseCategory();
   // console.log(getCategory(1))
@@ -12,8 +13,8 @@ function App() {
         <hr className='w-5/6 m-auto border-1 border-stone-700 dark:border-stone-100' />
         <CatContainer categories={categories} />
       </div>
-      <div className='w-5/6 overflow-y-auto h-full'>
-
+      <div className='relative w-5/6 overflow-y-auto h-full'>
+        <TopBar />
       </div>
     </div>
   )
