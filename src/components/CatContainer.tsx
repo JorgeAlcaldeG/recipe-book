@@ -1,8 +1,9 @@
+import CatElement from "./CatElement";
 export interface Category {
-idCategory:             string;
-strCategory:            string;
-strCategoryThumb:       string;
-strCategoryDescription: string;
+  idCategory:             string;
+  strCategory:            string;
+  strCategoryThumb:       string;
+  strCategoryDescription: string;
 }
 type Props = {
     categories:Category[]
@@ -10,10 +11,10 @@ type Props = {
 
 export default function CatContainer({categories}: Props) {
   return (
-    <div>
+    <div className="flex flex-col flex-wrap">
         {
         categories?.map(cat =>(
-          <p>{cat.strCategory}</p>
+          <CatElement text={cat.strCategory} key={cat.idCategory} img={cat.strCategoryThumb} />
         ))
       }
     </div>
