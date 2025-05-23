@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
-export interface Categories {
-    categories: Category[];
-}
+import type { Category, Categories } from "../types/category";
 
-export interface Category {
-    idCategory:             string;
-    strCategory:            string;
-    strCategoryThumb:       string;
-    strCategoryDescription: string;
-}
 const APIURL:string = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
 

@@ -9,10 +9,10 @@ export default function TopBar({}: Props) {
 
     return (
         <div className="absolute top-0 w-full">
-            <div className="mx-auto w-1/2 flex flex-row items-center p-4 rounded-b-xl bg-white border-solid border-2 border-stone-200 dark:bg-stone-800 dark:border-stone-600">
+            <div className="mx-auto w-1/2 flex flex-row items-center p-4 rounded-b-xl bg-white border-solid border-2 border-stone-200 dark:bg-stone-800 dark:border-stone-600 transition-colors duration-300">
                 <form className="w-full">
                     <input className="w-5/6 bg-stone-100 dark:bg-stone-600" type="text" name="" id="" />
-                    <button type="submit">Buscar</button>
+                    <button type="submit">Search</button>
                 </form>
 
                 <button onClick={toggleDarkMode}>
